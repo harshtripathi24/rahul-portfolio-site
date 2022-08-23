@@ -7,8 +7,6 @@ import Jump from "react-reveal/Jump";
 
 const allCategories = [...new Set(works.map((work) => work.category))];
 
-console.log(allCategories);
-
 const MyWork = ({ MyWorkSectionRef }) => {
   const [renderWorks, setRenderWorks] = useState(
     works.filter((work) => work.category === "Social Media")
@@ -20,8 +18,6 @@ const MyWork = ({ MyWorkSectionRef }) => {
     const newWorks = works.filter((work) => work.category === category);
     setRenderWorks(newWorks);
     setCurrentCategory(category);
-    console.log("button Pressed");
-    // console.log(newWorks);
   };
 
   return (
@@ -33,7 +29,7 @@ const MyWork = ({ MyWorkSectionRef }) => {
       <div className="CategoriesNav">
         {categories.map((category, index) => {
           return (
-            <Jump>
+            <Jump key={index}>
               <button
                 type="button"
                 key={index}
@@ -49,7 +45,6 @@ const MyWork = ({ MyWorkSectionRef }) => {
       </div>
       <div className="WorkCategory">
         {renderWorks.map((work) => {
-          console.log(renderWorks);
           return (
             <Slide key={work.id} bottom>
               <img src={work.img} alt={work.id} />;

@@ -65,8 +65,6 @@ function App() {
     window.addEventListener("scroll", stickNavbar);
   }, []);
 
-  console.log(isMenuOpen);
-
   return (
     <>
       <div className="App">
@@ -112,7 +110,7 @@ function App() {
         </div>
         <div className="HomeDivBottom">
           <div className="HomeDesImage">
-            <img src={RahulImage2} alt="Rahul Image Small" srcset="" />
+            <img src={RahulImage2} alt="Rahul Image Small" />
           </div>
           <div className="CounterDiv">
             <div className="counter 1">

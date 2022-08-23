@@ -13,8 +13,8 @@ export const WorkExperience = ({ WorkExpSectionRef }) => {
         {WorkCompanies &&
           WorkCompanies.map((company) => {
             return (
-              <Fade bottom>
-                <div className="company" key={company.id}>
+              <Fade bottom key={company.id}>
+                <div className="company">
                   <img src={company.image} alt="Image" />
                   <h3>{company.company}</h3>
                   <p>{company.exp}</p>
