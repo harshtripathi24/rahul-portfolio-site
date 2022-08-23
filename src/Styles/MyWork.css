@@ -1,0 +1,73 @@
+.CategoriesNav {
+  display: flex;
+  /* border: 2px blue solid; */
+  padding: 0.5em;
+  margin: 0.5em;
+  /* justify-content: space-evenly; */
+}
+.NavButton {
+  margin-left: auto;
+  margin-right: auto;
+  color: gray;
+  padding-bottom: 0.5em;
+  background: none;
+  border: none;
+  font-weight: normal;
+  font-size: small;
+  cursor: pointer;
+}
+
+.NavButton:hover {
+  color: white;
+  border-bottom: 1px var(--pink) solid;
+  font-weight: bold;
+}
+.WorkCategory {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid var(--pink);
+  border-radius: 25px;
+}
+
+.WorkCategory img {
+  display: block;
+  border-radius: 15px;
+  width: 85%;
+  text-align: center;
+  margin: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.activeButton {
+  color: white;
+  border-bottom: 1px var(--pink) solid;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 868px) {
+  .CategoriesNav {
+    width: 55vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .NavButton {
+    font-size: medium;
+  }
+  .WorkCategory {
+    width: 85vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+
+    justify-content: left;
+  }
+  .WorkCategory img {
+    width: 30%;
+    margin-right: auto;
+    padding: 0.1em;
+  }
+}

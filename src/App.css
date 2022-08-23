@@ -1,38 +1,360 @@
-.App {
-  text-align: center;
+/* ===============IMPORTS=================== */
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Oswald&family=Roboto&display=swap");
+@import "../node_modules/animate.css/animate.css";
+
+/* ===============IMPORTS=================== */
+
+body {
+  background-color: rgb(28, 27, 27);
+  margin: 0;
+  overflow-x: hidden;
+  font-style: Roboto, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --pink: rgb(201, 23, 136);
+  --ThemeBlack: rgba(16, 16, 17, 1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* .App {
+  background-color: rgb(28, 27, 27);
+} */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.HomeDivTop {
+  background-color: var();
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: row;
+  position: sticky;
+  top: 0;
+
+  margin: 0em;
+  z-index: 4;
+}
+.StickyNavbarColor {
+  background-color: black;
+}
+
+.HomeDivMiddle {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-between;
+  margin: 0em;
+}
+
+.HomeDivBottom {
+  height: 26vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  margin: 0em;
+
+  overflow: hidden;
+}
+
+.HomeDesignDiv {
+  width: 100vw;
+  height: 100vh;
+
+  background: linear-gradient(
+    225deg,
+    rgba(16, 16, 17, 1) 82%,
+    rgba(218, 22, 145, 1) 100%
+  );
+  clip-path: polygon(0 0, 60% 0, 40% 100%, 0 100%);
+  display: flex;
+  position: absolute;
+  z-index: 0;
+}
+.Logo-Text {
+  width: 90%;
   color: white;
+  text-align: left;
+  font-family: "Oswald", sans-serif;
+  padding: 0.5em;
+  font-size: 2em;
+  margin: 0.5em;
+  font-weight: 200;
+}
+.TopNavDiv {
+  display: flex;
+  width: 92vw;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* position: absolute; */
+  z-index: 3;
+}
+.MenuButton {
+  visibility: hidden;
+  display: none;
 }
 
-.App-link {
-  color: #61dafb;
+.NavigationBar {
+  width: 45vw;
+  margin: 0.3em;
+  color: transparent;
+  /* margin: 0.3em; */
+
+  margin-left: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.NavDiv {
+  display: flex;
+  justify-content: right;
+  width: 40vw;
+  height: 10vh;
+
+  margin-left: auto;
+  margin-top: 2em;
+}
+
+.NavDiv a {
+  color: white;
+  margin: 0.6em;
+  text-decoration: none;
+  font-size: medium;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+}
+.NavDiv a:hover {
+  color: var(--pink);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.HomeImage {
+  display: flex;
+
+  margin: 1em;
+  /* margin-left: 3.5em; */
+  margin-top: 2em;
+
+  width: fit-content;
+  height: fit-content;
+}
+.HomeImage img {
+  width: 35vw;
+  height: 52vh;
+}
+
+.HomeDesImage {
+  /* position: absolute; */
+
+  width: fit-content;
+  height: fit-content;
+  margin-top: auto;
+  margin-left: 3vw;
+}
+.HomeDesImage img {
+  width: 20vw;
+  height: 29vh;
+}
+.ForgroundText {
+  color: white;
+
+  width: 40vw;
+  height: 25vh;
+  margin: 2em;
+  margin-top: 10%;
+}
+
+.ForgroundText h2 {
+  color: white;
+  font-size: 4em;
+  margin: 0.2em;
+}
+.ForgroundText p {
+  text-align: center;
+  margin: 0.4em;
+  font-size: 1.1em;
+}
+.ForgroundText span {
+  color: var(--pink);
+  font-weight: bold;
+}
+.CounterDiv {
+  display: flex;
+  width: 45vw;
+  height: fit-content;
+
+  margin-left: 2em;
+  margin-left: auto;
+  margin-right: 2.5em;
+  margin-top: 5em;
+
+  justify-content: space-between;
+}
+.counter {
+  display: flex;
+  width: 20%;
+  color: rgb(236, 236, 236);
+  margin: none;
+  padding: none;
+  gap: 0px;
+  flex-direction: column;
+}
+.counter p {
+  margin: none;
+
+  padding: none;
+  margin-left: 1em;
+  font-size: x-small;
+  font-weight: 600;
+  color: #a3a3a3;
+}
+
+.CountNumber {
+  font-size: larger;
+
+  font-weight: bold;
+  padding: none;
+}
+
+@media only screen and (max-width: 868px) {
+  .HomeDesignDiv {
+    width: 100vw;
+    height: 200vh;
+
+    clip-path: none;
+    display: flex;
+    position: absolute;
+    z-index: 0;
   }
-  to {
-    transform: rotate(360deg);
+  .HomeDivTop {
+    background-color: var(--ThemeBlack);
+    /* border: 2px red solid; */
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    top: 0;
+    margin: 0em;
+  }
+  .Nav {
+    margin: auto;
+  }
+  .MenuButton {
+    margin: 0.3em;
+    visibility: visible;
+    display: block;
+    /* border: 2px red solid; */
+    background-color: transparent;
+    color: white;
+    font-size: xx-large;
+    cursor: pointer;
+  }
+
+  .HomeDivMiddle {
+    flex-direction: column;
+    direction: row-reverse;
+  }
+  .HomeDivBottom {
+    height: 91vh;
+  }
+  .HomeImage {
+    display: flex;
+
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-left: 3.5em; */
+    margin-top: 2em;
+
+    width: fit-content;
+    height: fit-content;
+  }
+  .HomeImage img {
+    width: 55vw;
+    height: 50vh;
+  }
+  .ForgroundText {
+    width: 80vw;
+    text-align: center;
+  }
+  .ForgroundText h2 {
+    font-size: 3em;
+    margin: 0em;
+  }
+  .ForgroundText p {
+    font-size: 1.2em;
+  }
+
+  .ForgroundText {
+    order: 2;
+  }
+
+  .CounterDiv {
+    width: 70vw;
+    flex-direction: column;
+
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .counter {
+    display: flex;
+    width: 50%;
+    color: rgb(236, 236, 236);
+    margin: 0.3em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: none;
+    text-align: center;
+    gap: 0px;
+    flex-direction: column;
+
+    font-size: x-large;
+  }
+  .counter p {
+    font-size: medium;
+    margin: none;
+  }
+
+  .HomeDesImage {
+    margin-top: auto;
+  }
+  .HomeDesImage img {
+    width: 30vw;
+    height: 35svh;
+    padding: none;
+
+    margin-top: 5em;
+  }
+
+  .NavigationBar {
+    background-color: rgb(32, 30, 30);
+    opacity: 95%;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    margin-left: 20vw;
+    margin: none;
+    margin-left: auto;
+    z-index: 3;
+  }
+  .NavDiv {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    margin: none;
+
+    flex-direction: column;
+    margin-left: none;
+    /* border: 2px blue dotted; */
+  }
+  .NavDiv a {
+    border-top: 2px wite solid;
+  }
+  .NavigationBar a {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: larger;
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 1px white dotted;
+  }
+  .VissibleMenu {
+    display: none;
+    visibility: hidden;
   }
 }

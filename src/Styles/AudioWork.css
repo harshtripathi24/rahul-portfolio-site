@@ -1,0 +1,65 @@
+.AudioWorkDiv h2 {
+  font-size: xx-large;
+  color: white;
+  text-align: left;
+  margin: 1.5em;
+}
+
+.AudioIcon {
+  color: white;
+  padding-top: 0.3em;
+  font-size: 1em;
+}
+
+.audioContainer {
+  display: flex;
+  flex-direction: column;
+  border: 2px var(--pink) solid;
+  width: 85vw;
+  border-radius: 25px;
+  margin: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.col {
+  width: 90%;
+  /* border: 1px green solid; */
+  margin: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.player {
+  display: block;
+  width: 80%;
+  margin: 1em;
+
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+}
+.audioContainer h3 {
+  color: gray;
+  margin: 1em;
+
+  font-weight: bolder;
+  font-size: 1.3em;
+  text-align: left;
+  font-style: italic;
+}
+
+@media only screen and (min-width: 868px) {
+  .audioContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .audioContainer h3 {
+    text-align: center;
+  }
+  .group {
+    width: 50%;
+  }
+}

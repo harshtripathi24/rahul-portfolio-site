@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "image": "./images/ShreeRam.png",
+    "company": "ShreeRam - Advertising & Marketing",
+    "exp": "(2018 - 2020)"
+  },
+  {
+    "id": 2,
+    "image": "./images/Pariksha.png",
+    "company": "Pariksha - Edutech",
+    "exp": "(2018 - 2021)"
+  },
+  {
+    "id": 3,
+    "image": "/images/Trell.png",
+    "company": "Trell - Short Videos",
+    "exp": "(Freelance)"
+  },
+  {
+    "id": 4,
+    "image": "/images/RadioRocket.png",
+    "company": "Radio Rocket - Radio Tech",
+    "exp": "(Jan 2022 - Current)"
+  }
+]
