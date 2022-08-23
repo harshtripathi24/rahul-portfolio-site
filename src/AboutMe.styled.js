@@ -6,6 +6,7 @@ export const AboutMeDiv = styled.div`
     font-size: 3em;
     color: grey;
     font-style: Roboto;
+    margin-top: 2em;
   }
   .AboutSection {
     width: 85vw;

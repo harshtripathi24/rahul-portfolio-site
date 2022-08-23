@@ -113,6 +113,7 @@ body {
 .NavDiv a {
   color: white;
   margin: 0.6em;
+  border: none;
   text-decoration: none;
   font-size: medium;
   font-weight: 400;
@@ -233,6 +234,10 @@ body {
   }
   .Nav {
     margin: auto;
+  }
+
+  .Nav button {
+    border: none;
   }
   .MenuButton {
     margin: 0.3em;
